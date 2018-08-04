@@ -36,23 +36,7 @@
 </div>
 <br>
 <br>
-<br>
-<div class="tit-inicio">
-    <div><h3>Convenios</h3></div>
-    <div class="linea"> </div>
-</div>
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="text-center">
-        <a href="convenio.php">
-            <img src="img/web/convenios.png" style="width:100%; height:100%; "/>
-        </a>
-        </div>
-    </div>
-    </div>
-    <div class="col-md-1"></div>
-</div>
+
 <br>
 <div class="tit-inicio">
     <div><h3>Marcas</h3></div>

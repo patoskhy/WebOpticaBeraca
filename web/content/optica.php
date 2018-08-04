@@ -19,7 +19,54 @@
     <div class="col-md-1"></div>
 </div>
 <br><br>
+<div class="tit-inicio">
+    <div class="linea"> </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h1  style="font-weight: bold;">NUESTRO EQUIPO</h1><br>
+    </div>  
+    <div class="col-md-1"></div>
+</div>
 
+                    
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 ">
+        <div class="team-block">
+			<div class="team-img">
+                <img src="<?=$dt["em.mailAdminImg1"]?>" style="width:250px; height:348px; "/>
+			</div>
+			<div class="team-text">
+				<i><?=$dt["em.mailAdminName1"]?></i>
+				<span class="line"></span>
+				<h5><?=$dt["em.titulo1"]?></h5>
+                <p><?=$dt["em.texto1"]?></p>
+				<a href="mailto: <?=$dt["em.mailAdmin1"]?>"><?=$dt["em.mailAdmin1"]?></a>
+			</div>
+        </div>
+    </div>
+    <div class="col-md-5 text-justify">
+    <div class="team-block">
+			<div class="team-img">
+                <img src="<?=$dt["em.mailAdminImg2"]?>" style="width:250px; height:348px; "/>
+			</div>
+			<div class="team-text">
+				<i><?=$dt["em.mailAdminName2"]?></i>
+				<span class="line"></span>
+				<h5><?=$dt["em.titulo2"]?></h5>
+				<p><?=$dt["em.texto2"]?></p>
+				<a href="mailto: <?=$dt["em.mailAdmin2"]?>"><?=$dt["em.mailAdmin2"]?></a>
+			</div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<br>
+<br>
 <div id="contacto"  class="tit-inicio">
     <div class="linea"> </div>
 </div>

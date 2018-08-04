@@ -1,4 +1,4 @@
-<div class="navbar-wrapper" style="z-index:9999">
+<div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">          
             <div id="navbar" class="navbar-collapse collapse">
@@ -8,9 +8,6 @@
                     <li><a href="catalogo.php?tipo=000001">LENTES ÓPTICOS</a></li>
                     <li><a href="catalogo.php?tipo=000002">LENTES DE SOL</a></li>
                     <li><a href="atencion.php">ATENCIÓN OFTALMOLÓGICA</a></li>
-                    <li><a href="convenio.php">CONVENIOS</a></li>
-                    <li><a href="promocion.php">PROMOCIONES</a></li>
-                    <li><a href="historias.php">HISTORIAS</a></li>
                     <li><a href="optica.php">ÓPTICA</a></li>
                 </ul>
             </div>
