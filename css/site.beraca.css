@@ -883,7 +883,7 @@ footer .footer-below {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 99999;
 }
 
 #loader {
@@ -893,7 +893,7 @@ footer .footer-below {
     top: 50%;
     width: 150px;
     height: 150px;
-    z-index: 1001;
+    z-index: 99999;
     background: url(../img/web/icono-beraca.png) center center no-repeat;
     background-size: 35%;
 }
