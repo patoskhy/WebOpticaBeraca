@@ -766,14 +766,13 @@ footer .footer-below {
 .team-img {
     position: relative;
     float: left;
-    width: 50%;
 }
 
 .team-text {
     position: relative;
     float: left;
-    width: 50%;
     padding: 10px 0px 84px 30px;
+    width: 50%;
 }
 
 .team-text i {
@@ -844,13 +843,17 @@ footer .footer-below {
 }
 
 .navbar-inverse:hover {
-    background-color: background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, 1);
     border-bottom: 5px solid #db0000;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse .navbar-nav>li>a:focus {
     background: url(../img/web/background-arrow-navigation-beraca.png) bottom center no-repeat;
+}
+
+.navbar-toggle {
+    background-color: #2C3E50;
 }
 
 .modal-danger .modal-header,

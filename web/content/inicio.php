@@ -87,7 +87,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <div class="text-center">
-            <img src="img/web/mediospago.jpg" class="text-center" >
+            <img src="img/web/mediospago.jpg" class="text-center" style="width:100%; height:100%; " >
         </div>
     </div>
     </div>
