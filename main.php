@@ -36,10 +36,12 @@
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
         
-        </div>>
+        </div>
         <?php include_once("web/navbar.php");?>
         <?php include_once("web/cabezera.php");?>
-        <?php include_once("web/container.php");?>
+        <div  class="container-fluid">
+            <?php include_once("web/container.php");?>
+        </div>
         <?php include_once("web/footer.php");?>
         <div class="modal modal-danger fade" id="myModal" >
             <div class="modal-dialog">
@@ -50,7 +52,7 @@
                     </div>
                     <div id="modColBody" class="modal-body" style="background-color: white !important; color: black !important">
                         <p id="modBody"></p>
-                     </div>
+                    </div>
                 </div> 
             </div>
         <div>

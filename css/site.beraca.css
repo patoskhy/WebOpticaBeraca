@@ -147,6 +147,11 @@ footer .footer-below {
     background-color: #233140
 }
 
+footer .footer-col>p>a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .btn-outline {
     color: #fff;
     font-size: 20px;
@@ -889,13 +894,30 @@ footer .footer-below {
 #loader {
     display: block;
     position: relative;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 45%;
     width: 150px;
     height: 150px;
     z-index: 99999;
     background: url(../img/web/icono-beraca.png) center center no-repeat;
     background-size: 35%;
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 767px) {
+    #loader {
+        display: block;
+        position: relative;
+        left: 30%;
+        top: 30%;
+        width: 150px;
+        height: 150px;
+        z-index: 99999;
+        background: url(../img/web/icono-beraca.png) center center no-repeat;
+        background-size: 35%;
+    }
 }
 
 #loader:before {

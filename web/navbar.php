@@ -1,5 +1,5 @@
 <div class="navbar-wrapper" style="z-index:9999">
-    <div class="container">
+
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">     
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -22,5 +22,5 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    
 </div>
