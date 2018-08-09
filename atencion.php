@@ -161,6 +161,7 @@
                     url:   'web/content/atencionGuardaCliente.php',
                     type:  'post',
                     success:  function (response) {
+						console.log(response);
                         searchData(response); 
                     },
                     error(xhr,status,error){

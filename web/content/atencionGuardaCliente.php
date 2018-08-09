@@ -44,9 +44,12 @@
         if(count($paciente) > 0){
             echo "con";
         }else{
-            echo "exi";
+            
 			//calcular los 7 min 
 			//insert
+			$INSERT = "INSERT INTO brc_operativos_detalle(DIA, HORA, HORA_PACIENTE, RUT_DOCTOR, RUT_CLIENTE, CERCA_OJO_D_E, CERCA_OJO_D_C, CERCA_OJO_D_G, CERCA_OJO_I_E, CERCA_OJO_I_C, CERCA_OJO_I_G, DPC, LEJOS_OJO_D_E, LEJOS_OJO_D_C, LEJOS_OJO_D_G, LEJOS_OJO_I_E, LEJOS_OJO_I_C, LEJOS_OJO_I_G, DPL, DESCRIPCION_RECETA, DESCUENTO_RECETA, ASISTENCIA)";
+			$INSERT = $INSERT . "VALUES ('".$diaP."','".$horP."','',".$docP.",".$rutVar[0].",'00,00','00,00','0°','00,00','00,00','0°','000','00,00','00,00','0°','00,00','00,00','0°','000','SIN DESCRIPCION',0,'N')";
+			$db->query($INSERT);
 			//confirmar si ingreso
 			$SELECT = "SELECT DISTINCT NOMBRE,CONCAT(SUBSTRING(HORA_PACIENTE,1,2),':',SUBSTRING(HORA_PACIENTE,3,2)) as HORA_FORMAT ";
 			$SELECT = $SELECT . "FROM brc_operativos_detalle INNER JOIN brc_persona ON 	RUT_CLIENTE = RUT ";  
@@ -62,18 +65,19 @@
         
     }else{
         //echo "nue";
+		$nombreP = "";
 		if (ISSET($_POST["nombre"])) {
 			$nombreP = trim($_POST["nombre"]);
 		}
-		
+		$direccionP = "";
 		if (ISSET($_POST["direccion"])) {
 			$direccionP = trim($_POST["direccion"]);
 		}
-		
+		$fonoP = "0";
 		if (ISSET($_POST["fono"])) {
 			$fonoP = trim($_POST["fono"]);
 		}
-		
+		$mailP = "";
 		if (ISSET($_POST["mail"])) {
 			$mailP = trim($_POST["mail"]);
 		}
