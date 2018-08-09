@@ -107,7 +107,7 @@ if(count($Dias) > 0){
                 <div class="col-md-4">
                     <label class="label label-default" for="rut">RUT:</label>
                     <input type="text" <?= ($rutP != "0-0") ? 'value="'.$rutP.'"' : '' ?> <?= ($rutP != "0-0") ? 'disabled="disabled"' : '' ?> id="rut" class="form-control" name="rut" size="12" maxlength="12" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="00000000-K">
-                    <input type="hidden" name="rutS" value="<?= $rutP ?>">
+                    <input type="hidden" name="rutS" id="rutS" value="<?= $rutP ?>">
                 </div>
                 <div class="col-md-2">
                     <br>

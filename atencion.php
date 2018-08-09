@@ -1,6 +1,7 @@
 <?php $page="atencion"; ?>
 <?php include_once("main.php");?>
-<?php/*
+<?php
+/*
     * searchdata busca los datos segun la opcion y la carga un html (atencionResult.php) en un div atencionResult
             opciones:   dia = busca los dias mayores al actual, se ejecuta al cargar la pagina
                     doc = busca los doctores segun el dia seleccionado, se ejecta en el change de el dia
@@ -74,15 +75,102 @@
                 });
             }
         });
-         //al presionar el boton buscar rut
-        $("#confirmar-button").on("click",function(e){ 
-
+         //al presionar el boton guardar 
+        $("#guardar-button").on("click",function(e){ 
+			dia = $("#dia").val();
+            doc = $("#doc").val();
+            hor = $("#hor").val();
+            rut = $("#rutS").val();
+			nombre = $("#nombre").val();
+			direccion = $("#direccion").val();
+			fono = $("#fono").val();
+			mail = $("#mail").val();
+            if(typeof rut == 'undefined' || rut == ""){
+                $("#modTitulo").html("Validación");
+                $("#modBody").html("Debe ingresar un Rut");
+                $("#myModal").removeClass();
+                $("#myModal").addClass("modal modal-danger fade");
+                $("#myModal").modal();
+            }else if(typeof nombre == 'undefined' || nombre == ""){
+                $("#modTitulo").html("Validación");
+                $("#modBody").html("Debe ingresar el nombre");
+                $("#myModal").removeClass();
+                $("#myModal").addClass("modal modal-danger fade");
+                $("#myModal").modal();
+            }else if(typeof direccion == 'undefined' || direccion == ""){
+                $("#modTitulo").html("Validación");
+                $("#modBody").html("Debe ingresar una dirección");
+                $("#myModal").removeClass();
+                $("#myModal").addClass("modal modal-danger fade");
+                $("#myModal").modal();
+            }else if(typeof fono == 'undefined' || fono == ""){
+                $("#modTitulo").html("Validación");
+                $("#modBody").html("Debe ingresar un teléfono");
+                $("#myModal").removeClass();
+                $("#myModal").addClass("modal modal-danger fade");
+                $("#myModal").modal();
+            }else if(typeof mail == 'undefined' || mail == ""){
+                $("#modTitulo").html("Validación");
+                $("#modBody").html("Debe ingresar un correo electrónico");
+                $("#myModal").removeClass();
+                $("#myModal").addClass("modal modal-danger fade");
+                $("#myModal").modal();
+            }else if(checkRut(rut) == true){
+                $.ajax({
+                    data:  {
+                        "dia" : dia,
+                        "doc" : doc,
+                        "hor" : hor,
+                        "rut" : rut,
+						"nombre" : nombre,
+						"direccion" : direccion,
+						"fono" : fono,
+						"mail" : mail
+                    },
+                    url:   'web/content/atencionGuardaCliente.php',
+                    type:  'post',
+                    success:  function (response) {
+                        searchData(response); 
+                    },
+                    error(xhr,status,error){
+                        alert("cago");
+                    }
+                });
+            }
         });
 
         $("#confirmar-button").on("click",function(e){ 
-            
-        });
-        $('#rut').keyup(function (e) {
+			dia = $("#dia").val();
+            doc = $("#doc").val();
+            hor = $("#hor").val();
+            rut = $("#rutS").val();
+            if(typeof rut == 'undefined' || rut == ""){
+                $("#modTitulo").html("Validación");
+                $("#modBody").html("Debe ingresar un Rut");
+                $("#myModal").removeClass();
+                $("#myModal").addClass("modal modal-danger fade");
+                $("#myModal").modal();
+            }else if(checkRut(rut) == true){
+                $.ajax({
+                    data:  {
+                        "dia" : dia,
+                        "doc" : doc,
+                        "hor" : hor,
+                        "rut" : rut
+                    },
+                    url:   'web/content/atencionGuardaCliente.php',
+                    type:  'post',
+                    success:  function (response) {
+                        searchData(response); 
+                    },
+                    error(xhr,status,error){
+                        alert("cago");
+                    }
+                });
+            }
+        });        
+		
+		$('#rut').keyup(function (e) {
                 var valor = $(this).val();
                 var valorFinal = "";
                 valor = valor.replace(/-/gi, "");
@@ -269,6 +357,5 @@
         // Si todo sale bien, eliminar errores (decretar que es válido)
         return true;
     }
-
 
 </script>
