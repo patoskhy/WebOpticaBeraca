@@ -57,9 +57,9 @@
 			$db->query($SELECT);
 			$paciente = $db->datos();
 			if(count($paciente) > 0){
-				echo "ok";
+				echo "con";
 			}else{
-				echo "nok";
+				echo "exi";
 			}
         }
         
@@ -82,21 +82,27 @@
 			$mailP = trim($_POST["mail"]);
 		}
 		
-		echo "nue";
+		//echo "nue";
 		//calcular los 7 min 
-		//insert persona
-		//insert operativo
+        //insert persona
+        $INSERT = "INSERT INTO brc_persona(RUT, DV, CAT_PERSONA, NOMBRE, DIRECCION, TELEFONO, EMAIL) ";
+		$INSERT = $INSERT . "VALUES (".$rutVar[0].",'".$rutVar[1]."','P00001','".$nombreP."','".$direccionP."','".$fonoP."','".$mailP."')";
+		$db->query($INSERT);
+        
+        //insert operativo
+        $INSERT = "INSERT INTO brc_operativos_detalle(DIA, HORA, HORA_PACIENTE, RUT_DOCTOR, RUT_CLIENTE, CERCA_OJO_D_E, CERCA_OJO_D_C, CERCA_OJO_D_G, CERCA_OJO_I_E, CERCA_OJO_I_C, CERCA_OJO_I_G, DPC, LEJOS_OJO_D_E, LEJOS_OJO_D_C, LEJOS_OJO_D_G, LEJOS_OJO_I_E, LEJOS_OJO_I_C, LEJOS_OJO_I_G, DPL, DESCRIPCION_RECETA, DESCUENTO_RECETA, ASISTENCIA)";
+		$INSERT = $INSERT . "VALUES ('".$diaP."','".$horP."','',".$docP.",".$rutVar[0].",'00,00','00,00','0°','00,00','00,00','0°','000','00,00','00,00','0°','00,00','00,00','0°','000','SIN DESCRIPCION',0,'N')";
+		$db->query($INSERT);
 		//confirmar si ingreso
-			$SELECT = "SELECT DISTINCT NOMBRE,CONCAT(SUBSTRING(HORA_PACIENTE,1,2),':',SUBSTRING(HORA_PACIENTE,3,2)) as HORA_FORMAT ";
-			$SELECT = $SELECT . "FROM brc_operativos_detalle INNER JOIN brc_persona ON 	RUT_CLIENTE = RUT ";  
-			$SELECT = $SELECT .  "WHERE DIA = '" . $diaP . "' AND 	RUT_CLIENTE = ".$rutVar[0]." AND HORA='".$horP."'  AND CAT_PERSONA = 'P00001'";     
-			$db->query($SELECT);
-			$paciente = $db->datos();
-			if(count($paciente) > 0){
-				echo "ok";
-			}else{
-				echo "nok";
-			}
+		$SELECT = "SELECT DISTINCT NOMBRE,CONCAT(SUBSTRING(HORA_PACIENTE,1,2),':',SUBSTRING(HORA_PACIENTE,3,2)) as HORA_FORMAT ";
+		$SELECT = $SELECT . "FROM brc_operativos_detalle INNER JOIN brc_persona ON 	RUT_CLIENTE = RUT ";  
+		$SELECT = $SELECT .  "WHERE DIA = '" . $diaP . "' AND 	RUT_CLIENTE = ".$rutVar[0]." AND HORA='".$horP."'  AND CAT_PERSONA = 'P00001'";     
+		$db->query($SELECT);
+		$paciente = $db->datos();
+		if(count($paciente) > 0){
+			echo "con";
+		}else{
+			echo "nue";
+		}
     }
-    //169043310
 ?>

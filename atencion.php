@@ -44,6 +44,8 @@
             $("#rut").val("0-0")
             searchData("res");
         });
+
+        $('.fono').mask('+(56)-0-00-00-0000');
          //al presionar el boton buscar rut
         $("#buscar-button").on("click",function(e){
             dia = $("#dia").val();
