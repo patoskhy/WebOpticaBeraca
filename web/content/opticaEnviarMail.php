@@ -27,7 +27,7 @@ if (!ISSET($_POST["comments"])) {
     $comments = "";
 }
 
-$asunto = "Contacto a ".$dt["gen.title"];
+$asunto = "Contacto a ".$config->fromName;
 $body = ' 
 <html> 
 <head>
