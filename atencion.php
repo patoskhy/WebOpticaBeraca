@@ -17,17 +17,14 @@
     * checkRut valida rut    
 */?>
 <script>
-
     $(document).ready(function(){
         searchData("dia");
 	});
-
     function initComplement(){
         $('select[id=dia]').selectpicker();
         $('select[id=hor]').selectpicker();
         $('select[id=doc]').selectpicker();
     }
-
     function includeEvents(){
         //al cambiar select dia
         $('#dia').on("change",function(){
@@ -44,7 +41,6 @@
             $("#rut").val("0-0")
             searchData("res");
         });
-
         $('.fono').mask('+(56)-0-00-00-0000');
          //al presionar el boton buscar rut
         $("#buscar-button").on("click",function(e){
@@ -140,7 +136,6 @@
                 });
             }
         });
-
         $("#confirmar-button").on("click",function(e){ 
 			dia = $("#dia").val();
             doc = $("#doc").val();
@@ -269,7 +264,6 @@
             $("#conCliBox").fadeIn("slow");
         }
     }
-
     function searchData(opt){
         dia = $("#dia").val();
         doc = $("#doc").val();
@@ -298,7 +292,6 @@
                 }
         });
     }
-
     function checkRut(rut) {
         // Despejar Puntos
         var valor = rut.replace('.','');
@@ -360,5 +353,4 @@
         // Si todo sale bien, eliminar errores (decretar que es válido)
         return true;
     }
-
 </script>
