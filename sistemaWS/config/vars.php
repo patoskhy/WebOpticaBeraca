@@ -29,8 +29,8 @@
 			$this->host = $dt["db.desa.host"];
 			$this->usuario = $dt["db.desa.usuario"];
 			$this->contrasenia = $dt["db.desa.contrasenia"];
-			$this->bd = $dt["db.desa.bd"]; */
-
+			$this->bd = $dt["db.desa.bd"]; 
+*/
 			//PRODUCCION
 			
 			$this->host = $dt["db.prod.host"];
