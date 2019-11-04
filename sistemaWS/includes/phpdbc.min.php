@@ -103,7 +103,7 @@ class db {
 						try {
 							$this->result=$this->connec->query($sql);
 						} catch (PDOException $e) {
-							$this->Error = "Ha fallado la conexión.". $e->getMessage();
+							$this->Error = "Ha fallado la conexi�n.". $e->getMessage();
 						}
 						if ($this->Config["web.debug"]) {
 							echo "\nResult: ";

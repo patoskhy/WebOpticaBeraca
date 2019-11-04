@@ -42,7 +42,7 @@
         });
     }
 
-    function CargaDetalle(codigo,tipo,marca,material,forma,color,marcaB,materialB,formaB,colorB){
+    function CargaDetalle(codigo,tipo,marca,material,forma,color,marcaB,materialB,formaB,colorB,pagina){
          $.ajax({
                 data:  {
                     "det": codigo,
@@ -54,7 +54,8 @@
 					"marcaB" : marcaB.trim(),
                     "materialB" : materialB.trim(),
                     "formaB" : formaB.trim(),
-                    "colorB" : colorB.trim()
+                    "colorB" : colorB.trim(),
+                    "pagina" : pagina.trim()
                 },
                 url:   'web/content/catalogoDetalle.php',
                 type:  'post',
@@ -88,14 +89,15 @@
         });
     }
 
-    function VolverResult(tipo,marca,material,forma,color){
+    function VolverResult(tipo,marca,material,forma,color,pagina){
          $.ajax({
                 data:  {
                     "tipo": tipo.trim(),
                     "marca" : marca.trim(),
                     "material" : material.trim(),
                     "forma" : forma.trim(),
-                    "color" : color.trim()
+                    "color" : color.trim(),
+                    "pagina" : pagina.trim()
                 },
                 url:   'web/content/catalogoResult.php',
                 type:  'post',
