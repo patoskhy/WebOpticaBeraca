@@ -44,12 +44,13 @@
             break;
         default:
             /*default*/
+			
             include_once("carousel.php");
 ?>
              <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10 text-center">
-                    <h1 class="h1f"><?=$dt["gen.title"]?>: Venta de Lentes Ópticos.</h1>
+                    <h1 class="h1f"><?=$dt["gen.title"]?><?=$dt["gen.subtitulo"]?></h1>
                 </div>
                 <div class="col-lg-1"></div>
             </div>
