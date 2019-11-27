@@ -3,7 +3,7 @@
         case "catalogo":
         /*cabezera de catalago*/
 ?>
-            <div class="container" style="margin-top:70px;">
+            <div class="container-fluid" style="margin-top:70px;">
                 <div class="row">
                     <div class="col-lg-12">
                         <img style="width:100%; " src="img/web/img<?= ( $_GET["tipo"] == "000001" ? "2" : "5" )?>.jpg">
@@ -17,7 +17,7 @@
         case "optica":
         /*cabezera de optica*/
 ?> 
-            <div class="container" style="margin-top:70px;">
+            <div class="container-fluid" style="margin-top:70px;">
                 <div class="row">
                     <div class="col-lg-12">
                         <img style="width:100%;" src="img/web/img3.jpg">
@@ -31,7 +31,7 @@
         case "atencion":
         /*cabezera de atencion*/
 ?>
-            <div class="container" style="margin-top:70px;">
+            <div class="container-fluid" style="margin-top:70px;">
                 <div class="row">
                     <div class="col-lg-12">
                         <img style="width:100%;" src="img/web/img4.jpg">
@@ -42,9 +42,50 @@
             </div>
 <?php            
             break;
+        case "convenio":
+            /*cabezera de atencion*/
+    ?>
+                <div class="container-fluid" style="margin-top:70px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img style="width:100%;" src="img/web/img1.jpg">
+                            <h1 class="texto-cabezera-der">Convenios</h1>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+    <?php            
+            break;
+        case "promocion":
+            /*cabezera de atencion*/
+    ?>
+                <div class="container-fluid" style="margin-top:70px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img style="width:100%;" src="img/web/img6.png">
+                            <h1 class="texto-cabezera-der">Promociones</h1>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+    <?php            
+            break;
+        case "historia":
+            /*cabezera de atencion*/
+    ?>
+                <div class="container-fluid" style="margin-top:70px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img style="width:100%;" src="img/web/img7.jpg">
+                            <h1 class="texto-cabezera-der">Historias</h1>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+    <?php            
+            break;
         default:
             /*default*/
-			
             include_once("carousel.php");
 ?>
              <div class="row">
