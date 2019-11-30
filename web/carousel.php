@@ -1,4 +1,3 @@
-
 <div class="remove-pantalla" >
 	<div class="row" style="margin-top:90px; ">
         <div class="col-md-12" style="text-align: center;">
@@ -21,7 +20,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <a href="optica.php" style="text-decoration:none;">
+            <a href="optica<?= ($dt["gen.siExtencion"] == "S" ? ".php" : "" )?>" style="text-decoration:none;">
                 <img class="first-slide" src="<?=$dt["car.first.slide"]?>" class="img-responsive" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption">
@@ -40,7 +39,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="catalogo.php?tipo=000002" style="text-decoration:none;">
+            <a href="catalogo<?= ($dt["gen.siExtencion"] == "S" ? ".php" : "" )?>?tipo=000002" style="text-decoration:none;">
                 <img class="second-slide" src="<?=$dt["car.second.slide"]?>" class="ing-responsive" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
@@ -59,7 +58,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="catalogo.php?tipo=000001" style="text-decoration:none;">
+            <a href="catalogo<?= ($dt["gen.siExtencion"] == "S" ? ".php" : "" )?>?tipo=000001" style="text-decoration:none;">
                 <img class="third-slide" src="<?=$dt["car.third.slide"]?>" class="ing-responsive" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption">
@@ -78,7 +77,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="atencion.php" style="text-decoration:none;">
+            <a href="atencion<?= ($dt["gen.siExtencion"] == "S" ? ".php" : "" )?>" style="text-decoration:none;">
                 <img class="forth-slide" src="<?=$dt["car.forth.slide"]?>" class="ing-responsive" alt="Forth slide">
                 <div class="container">
                     <div class="carousel-caption">
