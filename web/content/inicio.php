@@ -11,7 +11,7 @@
     $db->setConection($config->host, $config->usuario, $config->contrasenia, $config->bd, "PDO");
     $db->conectar();
 
-    $SELECT = "SELECT CODIGO,IMG ";
+    $SELECT = "SELECT CODIGO,PARAM1 ";
     $SELECT = $SELECT . "FROM brc_codigos_web WHERE TIPO = 'MARCA' ";  
     $db->query($SELECT);
     $result = $db->datos();
@@ -116,7 +116,7 @@
     <div class="col-md-12 ftco-animate">
         <div class="customer-logos">
         <?php foreach($result as $row){ ?>
-            <div class="slide"><a href="catalogo<?= ($dt["gen.siExtencion"] == "S" ? ".php" : "" )?>?tipo=000001&marca=<?=$row["CODIGO"]?>"><img src="<?=$dt['gen.sistema'].$row["IMG"]?>"></a></div>
+            <div class="slide"><a href="catalogo<?= ($dt["gen.siExtencion"] == "S" ? ".php" : "" )?>?tipo=000001&marca=<?=$row["CODIGO"]?>"><img src="<?=$dt['gen.sistema'].$row["PARAM1"]?>"></a></div>
         <?php } ?>
         </div>
     </div>
